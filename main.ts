@@ -10,9 +10,12 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 
-// The line. Nothing here varies between runs.
-const LINE =
-  "I can talk to animals, but only moths \u2014 and all they ever ask is for me to turn the porch light back on.";
+// The line, built from parts so each beat can be tuned on its own.
+// POWER: the dream. LIMIT: the catch. PAYOFF: the only thing they say.
+const POWER = "I can talk to animals";
+const LIMIT = "but only moths";
+const PAYOFF = "and all they ever say is: 'Turn the porch light back on.'";
+const LINE = `${POWER} \u2014 ${LIMIT}, ${PAYOFF}`;
 
 // Gate: /output/entry.txt must be UTF-8 text of 1 to 200 characters,
 // counted as Unicode code points, and not only white space.
